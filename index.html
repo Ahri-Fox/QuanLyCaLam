@@ -22,6 +22,8 @@
         <div class="head">
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalThem">Thêm mới</button>
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalThemNhanVien">Thêm Nhân viên</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalDSNhanVien">Danh sách Nhân
+                viên</button>
             <h2 class="ml-5">bảng phẩn công làm việc </h2>
         </div>
         <div class="table">
@@ -94,7 +96,6 @@
 
     </div>
 
-
     <!-- modal -->
     <div class="modal fade" id="modalThem">
         <div class="modal-dialog modal-xl">
@@ -119,65 +120,120 @@
                                 <p>Thứ 2</p>
                             </div>
                             <div class="col">
-                                <input type="text">
+                                <input type="text" id="sangT2">
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="ChieuT2">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT2">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT2">
+                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Thứ 3</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangT3">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuT3">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT3">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT3">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Thứ 4</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangT4">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuT4">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT4">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT4">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Thứ 5</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangT5">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuT5">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT5">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT5">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Thứ 6</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangT6">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuT6">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT6">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT6">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Thứ 7</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangT7">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuT7">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offT7">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllT7">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col font-weight-bold">
                                 <p>Chủ nhật</p>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" id="sangCN">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="ChieuCN">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offCN">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="offAllCN">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,7 +261,7 @@
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
                                 <input type="msnv" name="id" id="id" class="form-control input-sm"
-                                    placeholder="Mã số sinh viên" />
+                                    placeholder="Mã số nhân viên" />
                             </div>
                         </div>
 
@@ -256,6 +312,52 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="modalDSNhanVien">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Danh sách nhân viên</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Tên nhân viên" id="searchName" />
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-hover myTable">
+                            <thead class="text-primary">
+                                <tr>
+                                    <th class="nowrap">
+                                        <span class="mr-1">Mã nhân viên</span> 
+                                    </th>
+                                    <th>Họ tên</th>
+                                    <th>Email</th>
+                                    <th>Số điện thoại</th>
+                                    <th>CMND</th>
+                                    <th><em class="fa fa-cog"></em></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableDanhSach">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
