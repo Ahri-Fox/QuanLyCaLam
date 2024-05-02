@@ -65,10 +65,21 @@ const getEmployees = (id) =>{
     getEle("email").value = index.Email;
     getEle("phone").value = index.SoDT;
     getEle("idCard").value = index.CMND;
-
 }
 window.getEmployees = getEmployees;
 
 const updateEmployees =() =>{
+    const employeeId = getEle("id").value;
+    const name = getEle("name").value;
+    const email = getEle("email").value;
+    const phone = getEle("phone").value;
+    const idCard = getEle("idCard").value;
 
+    const updateEmployee = new Employee(employeeId, name, email, phone, idCard);
+    // let index  = employeeList.findEmployeeById(id);
+    employeeList.updateEmployee(employeeId,updateEmployee);
+    getEle("btnClose").click();
+    getEle("btnReset").click();
+    showEmployeeList();
 }
+window.updateEmployees = updateEmployees;

@@ -1,3 +1,5 @@
+
+
 table{
     width: 100%;
 }
@@ -28,4 +30,6 @@ input {
 
 #modalThemNhanVien{
     z-index: 9999;
+    background-color: #C0C0C0;
 }
+
