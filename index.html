@@ -21,10 +21,11 @@
     <div>
         <div class="head">
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalThem">Thêm mới</button>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modalThemNhanVien">Thêm Nhân viên</button>
+            <button id="btnThemNhanVien" class="btn btn-primary" data-toggle="modal" data-target="#modalThemNhanVien">Thêm Nhân viên</button>
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalDSNhanVien">Danh sách Nhân
                 viên</button>
-            <h2 class="ml-5">bảng phẩn công làm việc </h2>
+            <h2 class="ml-5">bảng phân công làm việc </h2>
+            
         </div>
         <div class="table">
             <table>
@@ -42,49 +43,63 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Thứ 2</th>
+                        <th>Thứ 2
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Thứ 3</th>
+                        <th>Thứ 3
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>thứ 4</th>
+                        <th>thứ 4
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Thứ 5</th>
+                        <th>Thứ 5
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Thứ 6</th>
+                        <th>Thứ 6
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Thứ 7</th>
+                        <th>Thứ 7
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Chủ nhật</th>
+                        <th>Chủ nhật
+                            <input type="date" id="date" name="date" required>
+                        </th>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -101,12 +116,17 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thông tin</h5>
+                    <h5 class="modal-title text-danger" id="exampleModalLabel">Thông tin</h5>
+                    
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="form-group m-0 ml-2">
+                        <label class="mt-2 font-weight-bold" for="date">Ngày đầu Tuần:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
                     <div class="table container-fluid">
                         <div class="row">
                             <div class="col font-weight-bold"></div>
@@ -249,7 +269,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Thông tin</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" id="btnClose" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -304,10 +324,12 @@
                                     placeholder="CMND" />
                             </div>
                         </div>
+                        <button type="reset" class="d-none" id="btnReset">reset</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Thêm</button>
+                    <button id="btnUpdate" type="button" class="btn btn-success" onclick="updateEmployees()"> Cập nhật</button>
+                    <button type="button" class="btn btn-primary" onclick="addEmployees()">Thêm</button>
                 </div>
             </div>
         </div>
@@ -327,7 +349,8 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Tên nhân viên" id="searchName" />
+                                    <input type="text" class="form-control" placeholder="Tên nhân viên"
+                                        id="searchName" />
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i>
                                         </span>
@@ -339,7 +362,7 @@
                             <thead class="text-primary">
                                 <tr>
                                     <th class="nowrap">
-                                        <span class="mr-1">Mã nhân viên</span> 
+                                        <span class="mr-1">Mã nhân viên</span>
                                     </th>
                                     <th>Họ tên</th>
                                     <th>Email</th>
@@ -359,7 +382,7 @@
     </div>
 
 
-    <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -370,6 +393,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+
 </body>
 
 </html>
