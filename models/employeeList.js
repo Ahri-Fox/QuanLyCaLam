@@ -19,8 +19,8 @@ export class EmployeeList {
         <td>${employee.SoDT}</td>
         <td>${employee.CMND}</td>
         <td>
-        <button class="btn btn-danger" onclick="removeEmployees('${employee.MaSV}')">Xóa</button>
-        <button class="btn btn-info" onclick="getEmployees('${employee.MaSV}')">Cập nhật</button>
+        <button class="btn btn-danger" onclick="removeEmployees('${employee.MaNV}')">Xóa</button>
+        <button class="btn btn-info" onclick="getEmployees('${employee.MaNV}')">Cập nhật</button>
         </td>
     </tr>`;
         }
@@ -29,7 +29,7 @@ export class EmployeeList {
 
     removeEmployee(maNV) {
         //tìm nhân viên muốn xóa
-        const index = this.list.findIndex(employee => employee.MaNV !== maNV);
+        const index = this.list.findIndex(employee => employee.MaNV == maNV);
         if (index === -1) {
             return { success: false, message: "Không tìm thấy nhân viên" };
 
@@ -43,14 +43,14 @@ export class EmployeeList {
         const index = this.list.find(employee => employee.MaNV === id);
         return index;
     }
-
+    
     updateEmployee(id, newData) {
-        const employeeToUpdate = findEmployeeById(id);
+        const employeeToUpdate = this.findEmployeeById(id);
         if (employeeToUpdate) {
           Object.assign(employeeToUpdate, newData);
           return true; // Trả về true nếu cập nhật thành công
         }
         return false; // Trả về false nếu không tìm thấy nhân viên có id tương ứng
-      };
+    };
 
 }   
