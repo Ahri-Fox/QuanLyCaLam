@@ -24,7 +24,7 @@
             <button id="btnThemNhanVien" class="btn btn-primary" data-toggle="modal" data-target="#modalThemNhanVien">Thêm Nhân viên</button>
             <button class="btn btn-primary" data-toggle="modal" data-target="#modalDSNhanVien">Danh sách Nhân
                 viên</button>
-            <h2 class="ml-5">bảng phân công làm việc </h2>
+            <h2 class="ml-5">Lịch trực <span id="ngayLamViec"></span> </h2>
             
         </div>
         <div class="table">
@@ -41,71 +41,71 @@
                         <th>OFF Cả ngày</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <!-- <tbody>
+                     <tr>
                         <th>Thứ 2
-                            <input type="date" id="date" name="date" required>
+                            <span id="timeeee"></span>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="2s"></td>
+                        <td id="2c"></td>
+                        <td id="2o"></td>
+                        <td id="2oa"></td>
                     </tr>
                     <tr>
                         <th>Thứ 3
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="3s"></td>
+                        <td id="3c"></td>
+                        <td id="3o"></td>
+                        <td id="3oa"></td>
                     </tr>
                     <tr>
                         <th>thứ 4
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="4s"></td>
+                        <td id="4c"></td>
+                        <td id="4o"></td>
+                        <td id="4oa"></td>
                     </tr>
                     <tr>
                         <th>Thứ 5
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="5s"></td>
+                        <td id="5c"></td>
+                        <td id="5o"></td>
+                        <td id="5oa"></td>
                     </tr>
                     <tr>
                         <th>Thứ 6
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="6s"></td>
+                        <td id="6c"></td>
+                        <td id="6o"></td>
+                        <td id="6oa"></td>
                     </tr>
                     <tr>
                         <th>Thứ 7
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="7s"></td>
+                        <td id="7c"></td>
+                        <td id="7o"></td>
+                        <td id="7oa"></td>
                     </tr>
                     <tr>
                         <th>Chủ nhật
                             <input type="date" id="date" name="date" required>
                         </th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="CNs"></td>
+                        <td id="CNc"></td>
+                        <td id="CNo"></td>
+                        <td id="CNoa"></td>
                     </tr>
-                </tbody>
+                </tbody> -->
             </table>
         </div>
 
@@ -118,14 +118,14 @@
                 <div class="modal-header">
                     <h5 class="modal-title text-danger" id="exampleModalLabel">Thông tin</h5>
                     
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" id="bntTat" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group m-0 ml-2">
                         <label class="mt-2 font-weight-bold" for="date">Ngày đầu Tuần:</label>
-                        <input type="date" id="date" name="date" required>
+                        <input type="date" id="week" name="date" required>
                     </div>
                     <div class="table container-fluid">
                         <div class="row">
@@ -258,7 +258,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Lưu</button>
+                    <button type="button" class="btn btn-primary" onclick="hienThiNhanVienVaoLich()">Lưu</button>
                 </div>
             </div>
         </div>
