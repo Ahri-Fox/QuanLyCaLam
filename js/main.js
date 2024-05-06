@@ -1,5 +1,10 @@
 import { Employee } from "../models/employee.js";
 import { EmployeeList } from "../models/employeeList.js";
+import { Shift } from "../models/shift.js";
+import { DayOff } from "../models/dayOff.js";
+import { Schedule } from "../models/schedule.js";
+
+
 
 let dataEmloyee = [
     { MaNV: "NV1",HoTen: "Hiếu",Email: "hieu@gmail.com", SoDT:"012345", CMND:"0054542"},
@@ -9,6 +14,7 @@ let dataEmloyee = [
 
 ];
 
+
 let employeeList = new EmployeeList();
 
 //Hàm rút gọn cú pháp ele'
@@ -16,7 +22,7 @@ const getEle = (id) => {
     return document.getElementById(id);
 }
 
-//hàm hiển thị danh sách kính
+//hàm hiển thị danh sách nhân viên
 const showEmployeeList = () => {
     let tableEmployee = getEle("tableDanhSach");
     tableEmployee.innerHTML = employeeList.renderEmployee();
@@ -83,3 +89,64 @@ const updateEmployees =() =>{
     showEmployeeList();
 }
 window.updateEmployees = updateEmployees;
+
+// Random màu sâc
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
+window.getRandomColor = getRandomColor;
+
+// const hienThiNhanVienVaoLich = ()=>{
+
+//     const weekInput = getEle('week');
+//     getEle("ngayLamViec").innerHTML = weekInput
+//     getEle("timeeee").innerHTML = weekInput;
+    
+
+//     let sangT2  = getEle("sangT2").value;
+//     getEle("2s").innerHTML = sangT2;
+//     getEle("2c").innerHTML = getEle("ChieuT2").value;
+//     getEle("2o").innerHTML = getEle("offT2").value;
+//     getEle("2oa").innerHTML = getEle("offAllT2").value;
+
+//     getEle("3s").innerHTML = getEle("sangT3").value;
+//     getEle("3c").innerHTML = getEle("ChieuT3").value;
+//     getEle("3o").innerHTML = getEle("offT3").value;
+//     getEle("3oa").innerHTML = getEle("offAllT3").value;
+    
+//     getEle("4s").innerHTML = getEle("sangT4").value;
+//     getEle("4c").innerHTML = getEle("ChieuT4").value;
+//     getEle("4o").innerHTML = getEle("offT4").value;
+//     getEle("4oa").innerHTML = getEle("offAllT4").value;
+    
+//     getEle("5s").innerHTML = getEle("sangT5").value;
+//     getEle("5c").innerHTML = getEle("ChieuT5").value;
+//     getEle("5o").innerHTML = getEle("offT5").value;
+//     getEle("5oa").innerHTML = getEle("offAllT5").value;
+    
+//     getEle("6s").innerHTML = getEle("sangT6").value;
+//     getEle("6c").innerHTML = getEle("ChieuT6").value;
+//     getEle("6o").innerHTML = getEle("offT6").value;
+//     getEle("6oa").innerHTML = getEle("offAllT6").value;
+    
+//     getEle("7s").innerHTML = getEle("sangT7").value;
+//     getEle("7c").innerHTML = getEle("ChieuT7").value;
+//     getEle("7o").innerHTML = getEle("offT7").value;
+//     getEle("7oa").innerHTML = getEle("offAllT7").value;
+    
+//     getEle("CNs").innerHTML = getEle("sangCN").value;
+//     getEle("CNc").innerHTML = getEle("ChieuCN").value;
+//     getEle("CNo").innerHTML = getEle("offCN").value;
+//     getEle("CNoa").innerHTML = getEle("offAllCN").value;
+    
+//     getEle("bntTat").click();
+  
+// }
+// window.hienThiNhanVienVaoLich = hienThiNhanVienVaoLich;
+
+
