@@ -1,7 +1,6 @@
 import { Employee } from "../models/employee.js";
-import { EmployeeList } from "../models/employeeList.js";
 import { Shift } from "../models/shift.js";
-import { DayOff } from "../models/dayOff.js";
+import { EmployeeList } from "../models/employeeList.js";
 import { Schedule } from "../models/schedule.js";
 
 
@@ -14,9 +13,28 @@ let dataEmloyee = [
 
 ];
 
+let dataLich = new LichLamViec(
+    1157,
+    "2024-04-19T08:05:38",
+    // Thêm các ca làm việc ở đây
+    [
+      new Ca("Thứ 2", "2024-04-19", ["NV1", "NV3"]),
+      new Ca("Thứ 4", "2024-04-21", ["NV3"])
+    ],
+    [
+      new Ca("Thứ 3", "2024-04-20", ["NV1"]),
+      new Ca("Thứ 5", "2024-04-22", ["NV4", "NV1"])
+    ],
+    [],
+    [
+      new Ca("Thứ 6", "2024-04-23", ["NV3"]),
+      new Ca("Thứ 7", "2024-04-24", ["NV4"])
+    ],
+    "2024-04-19"
+  );
 
 let employeeList = new EmployeeList();
-
+let lichLamviec = new Schedule(id, ngayTao, caMot, caHai, off, offAll, ngayDauTuan);
 //Hàm rút gọn cú pháp ele'
 const getEle = (id) => {
     return document.getElementById(id);
@@ -148,5 +166,11 @@ window.getRandomColor = getRandomColor;
   
 // }
 // window.hienThiNhanVienVaoLich = hienThiNhanVienVaoLich;
+
+const hienThiNhanVienVaoLich = ()=>{
+    lichLamviec.renderSchedule(lichLamViec, employeeList)
+    document.table.appendChild(lichLamviec);
+}
+window.hienThiNhanVienVaoLich = hienThiNhanVienVaoLich;
 
 
