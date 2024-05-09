@@ -1,7 +1,7 @@
 export class Shift {
-    constructor(dayOfWeek, value, date) {
+    constructor(dayOfWeek, nameEmployee, date) {
         this.dayOfWeek = dayOfWeek;
-        this.value = value;
+        this.nameEmployee = nameEmployee;
         this.date = date;
     }
 }
